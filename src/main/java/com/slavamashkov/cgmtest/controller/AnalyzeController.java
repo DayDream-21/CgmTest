@@ -21,9 +21,8 @@ public class AnalyzeController {
         return "Hello";
     }
 
-    @GetMapping("/{string}")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "0.00")
-    public synchronized List<AnalyzeResponse> analyze(@PathVariable(name = "string") String string) {
+    @GetMapping("/{input_string}")
+    public synchronized List<AnalyzeResponse> analyze(@PathVariable(name = "input_string") String string) {
         List<AnalyzeResponse> result = new ArrayList<>();
 
         Map<Character, Integer> charFrequency = analyzeService.calculateCharFrequency(string);
