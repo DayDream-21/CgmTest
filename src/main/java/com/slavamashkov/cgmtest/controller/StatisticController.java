@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/statistic")
+@RequestMapping("/api/statistics")
 public class StatisticController {
     private static Map<Character, List<Stat>> responseMap = new HashMap<>();
 
